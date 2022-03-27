@@ -1,0 +1,48 @@
+.ie-fallback {
+    width: 30vw;
+    min-width: 600px;
+    margin: auto;
+    margin-top: 100px;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+}
+
+.ie-fallback .bold {
+    font-weight: bold;
+}
+
+.ie-fallback h1, .ie-fallback p, .ie-fallback span {
+    color: #4A4B51;
+}
+
+.ie-fallback h1 {
+    font-size: 25px;
+}
+
+.ie-fallback hr {
+    margin: 7px 20px;
+    border-width: 2px;
+}
+
+.ie-fallback-dloptions {
+    padding: 20px 0 40px 0;
+}
+
+.ie-fallback-dloptions img {
+    padding-right: 20px;
+}
+
+.ie-fallback-browserdl {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ie-fallback-browserdl a {
+    font-weight: lighter;
+}
+
+.ie-fallback-footer p {
+    color: #6B6D78;
+    text-align: center;
+}

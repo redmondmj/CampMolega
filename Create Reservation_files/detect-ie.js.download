@@ -1,0 +1,23 @@
+function ES6IsSupported() {
+    // Try to execute some simple ES6 code and see if it fails to parse
+    // These expressions will fail on IE and other ES6-incompatible browsers
+    // but will succeed in ES6 environments
+    try {
+        eval('class Foo { }');
+        eval('var foo = () => 42');
+        return true;
+    } catch (err) {
+        return false;
+    }
+}
+
+var mainScript = document.querySelectorAll('script[data-main]')[0];
+if (!mainScript || !ES6IsSupported()) {
+    document.getElementById('ie-fallback').style.display = 'block';
+    var appRoot = document.getElementsByTagName('app-root')[0];
+    document.body.removeChild(appRoot);
+} else {
+    var script = document.createElement('script');
+    script.src = mainScript.getAttribute('data-main');
+    document.body.append(script);
+}
